@@ -11,7 +11,7 @@ export default function Palette() {
     >
       <div className="h-full flex flex-col">
         <TabNavigation />
-        <div className="flex-1 overflow-auto py-4">
+        <div className="flex-1 overflow-hidden">
           <ElementGrid />
         </div>
       </div>
