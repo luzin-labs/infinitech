@@ -43,3 +43,20 @@
 .appear-animation {
   animation: appear 300ms ease-out;
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Improve focus states for accessibility */
+*:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
