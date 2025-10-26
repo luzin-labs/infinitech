@@ -20,7 +20,13 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
     title: 'InfiniTech',
-    description: 'Combine tech elements to discover infinite possibilities'
+    description: 'Combine tech elements to discover infinite possibilities',
+    viewport: {
+        width: 'device-width',
+        initialScale: 1,
+        maximumScale: 1,
+        userScalable: false
+    }
 };
 
 const Layout = ({ children }: Readonly<{ children: ReactNode }>) => {
