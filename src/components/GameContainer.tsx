@@ -37,7 +37,8 @@ export default function GameContainer() {
           </button>
           <button
             onClick={() => setIsResetModalOpen(true)}
-            className="px-4 py-2 rounded-lg bg-red-600 text-white font-medium hover:bg-red-700 transition-colors text-sm"
+            className="px-4 py-2 bg-red-600 text-white font-medium hover:bg-red-700 transition-colors text-sm"
+            style={{ borderRadius: '3px' }}
           >
             Reset Progress
           </button>
