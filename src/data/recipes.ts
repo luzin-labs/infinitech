@@ -215,7 +215,7 @@ export const recipes: RecipeBook = {
   "Language+Memory": { result: "Rust", category: "software" },
   "Algorithm+C": { result: "Assembly", category: "software" },
   "AI+Python": { result: "TensorFlow", category: "advanced" },
-  "Data+JavaScript": { result: "jQuery", category: "applications" },
+  "Browser+JavaScript": { result: "jQuery", category: "applications" },
 
   // Frontend Branch
   "HTML+JavaScript": { result: "DOM-Alt", category: "applications" },
