@@ -1,12 +1,12 @@
-import HomePage from '@/app/(delete-this-and-modify-page.tsx)/HomePage';
+import GameContainer from '@/components/GameContainer';
 
 /**
- * The main page component that renders the HomePage component.
+ * The main page component that renders the Infinite Craft game.
  *
- * @returns {JSX.Element} The rendered HomePage component.
+ * @returns {JSX.Element} The rendered GameContainer component.
  */
 const Page = () => {
-    return <HomePage />;
+    return <GameContainer />;
 };
 
 export default Page;
