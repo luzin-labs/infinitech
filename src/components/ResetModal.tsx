@@ -39,13 +39,13 @@ export default function ResetModal({ isOpen, onClose }: ResetModalProps) {
         <div className="flex gap-3 justify-end">
           <button
             onClick={handleCancel}
-            className="px-4 py-2 rounded-lg bg-neutral-200 dark:bg-neutral-700 text-neutral-900 dark:text-neutral-100 font-medium hover:bg-neutral-300 dark:hover:bg-neutral-600 transition-colors"
+            className="px-4 py-2 rounded-none bg-neutral-200 dark:bg-neutral-700 text-neutral-900 dark:text-neutral-100 font-medium hover:bg-neutral-300 dark:hover:bg-neutral-600 transition-colors"
           >
             Cancel
           </button>
           <button
             onClick={handleReset}
-            className="px-4 py-2 rounded-lg bg-red-600 text-white font-medium hover:bg-red-700 transition-colors"
+            className="px-4 py-2 rounded-none bg-red-600 text-white font-medium hover:bg-red-700 transition-colors"
           >
             Reset
           </button>
