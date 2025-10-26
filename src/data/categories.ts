@@ -37,8 +37,8 @@ export function getCategoryColor(category: string): string {
 // Get category from element name (for starting elements)
 export function getElementCategory(elementName: string): Category {
   if (elementName === '0' || elementName === '1') {
-    return 'basic';
+    return 'fundamentals';
   }
   // For discovered elements, category is stored with the element
-  return 'basic'; // Default fallback
+  return 'fundamentals'; // Default fallback
 }
