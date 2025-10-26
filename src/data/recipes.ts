@@ -253,7 +253,7 @@ export const recipes: RecipeBook = {
   "Function+Serverless": { result: "Lambda", category: "software" },
 
   // Blockchain Branch
-  "Encryption+Network": { result: "Blockchain", category: "advanced" },
+  "Encryption+Hash": { result: "Blockchain", category: "advanced" },
   "Blockchain+Data": { result: "Bitcoin", category: "advanced" },
   "Blockchain+Code": { result: "Ethereum", category: "advanced" },
   "Code+Ethereum": { result: "Smart Contract", category: "advanced" },
