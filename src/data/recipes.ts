@@ -349,7 +349,7 @@ export const recipes: RecipeBook = {
   "Code+Sensor": { result: "MQTT", category: "infrastructure" },
   "IoT+Security": { result: "IoT Security", category: "infrastructure" },
   "Code+Raspberry Pi": { result: "Edge Computing", category: "infrastructure" },
-  "Data+IoT": { result: "Telemetry", category: "infrastructure" },
+  "IoT+Network": { result: "Telemetry", category: "infrastructure" },
   "Mobile+Smart Home": { result: "Home Automation", category: "infrastructure" },
 
   // Emerging Tech Branch
