@@ -97,9 +97,16 @@ export default function PaletteElement({ name, category, isNew }: PaletteElement
         {name}
       </div>
       {isNew && (
-        <span className="absolute -top-1 -right-1 px-2 py-0.5 bg-yellow-400 text-yellow-900 text-xs font-bold rounded-full shadow">
-          New!
-        </span>
+        <span
+          className="absolute -top-1.5 -right-1.5 rounded-full"
+          style={{
+            width: '14px',
+            height: '14px',
+            backgroundColor: '#00ff00',
+            border: '2px solid #00cc00',
+            animation: 'pulse-green 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+          }}
+        />
       )}
     </div>
   );
