@@ -79,7 +79,7 @@ export const recipes: RecipeBook = {
   // Bridge Elements (foundational for expansion branches)
   "Code+Data": { result: "Graphics", category: "software" },
   "Code+Software": { result: "Design", category: "software" },
-  "Algorithm+Data": { result: "Sound", category: "applications" },
+  "Data+Design": { result: "Sound", category: "applications" },
   "Algorithm+Function": { result: "Animation", category: "applications" },
   "Application+Software": { result: "State", category: "software" },
   "Application+Code": { result: "Editor", category: "software" },
