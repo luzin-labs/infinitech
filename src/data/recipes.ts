@@ -240,7 +240,7 @@ export const recipes: RecipeBook = {
   "Code+Server": { result: "Backend-Alt", category: "software" },
   "Backend+Language": { result: "Express", category: "software" },
   "Backend+Python": { result: "Flask", category: "software" },
-  "Backend+Python": { result: "FastAPI", category: "software" },
+  "API+Python": { result: "FastAPI", category: "software" },
   "Backend+Function": { result: "Route", category: "software" },
   "HTTP+Route": { result: "Endpoint", category: "software" },
   "Backend+Data": { result: "Middleware", category: "software" },
