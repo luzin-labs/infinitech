@@ -11,20 +11,11 @@ export const categoryColors: Record<string, string> = {
 
 // Tab names and order
 export const categoryTabs = [
-  'Basics',
-  'Logic',
-  'Data',
-  'Operations',
-  'Hardware',
+  'Fundamentals',
+  'Infrastructure',
   'Software',
-  'Network',
-  'Web',
-  'Mobile',
-  'Database',
-  'Security',
-  'DevOps',
-  'Languages',
-  'Tools',
+  'Applications',
+  'Advanced',
   'All',
 ] as const;
 
