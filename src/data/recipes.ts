@@ -364,7 +364,7 @@ export const recipes: RecipeBook = {
   "AI+Image": { result: "Computer Vision", category: "advanced" },
   "Algorithm+Computer Vision": { result: "Object Detection", category: "advanced" },
   "Code+Machine-Learning": { result: "Scikit-learn", category: "advanced" },
-  "AI+Code": { result: "AutoML", category: "advanced" },
+  "Algorithm+Machine-Learning": { result: "AutoML", category: "advanced" },
   "Computer+Quantum": { result: "Quantum Computer", category: "advanced" },
   "Algorithm+Quantum Computer": { result: "Quantum Algorithm", category: "advanced" },
   "AI+Robot": { result: "Robotics", category: "advanced" },
