@@ -44,19 +44,23 @@ export function playMergeAnimation(
 }
 
 /**
- * Play shake animation - horizontal shake motion
+ * Play shake animation - subtle horizontal shake
  */
 export function playShakeAnimation(elId: string): void {
   const el = document.getElementById(elId);
   if (!el) return;
 
-  // Add shake class
-  el.classList.add('shake-animation');
-
-  // Remove after animation completes
-  setTimeout(() => {
-    el.classList.remove('shake-animation');
-  }, SHAKE_ANIMATION_DURATION);
+  // Subtle shake animation using Web Animations API
+  el.animate([
+    { transform: 'translateX(0)' },
+    { transform: 'translateX(-2px)' },
+    { transform: 'translateX(2px)' },
+    { transform: 'translateX(-2px)' },
+    { transform: 'translateX(0)' }
+  ], {
+    duration: SHAKE_ANIMATION_DURATION,
+    easing: 'ease-in-out'
+  });
 }
 
 /**
