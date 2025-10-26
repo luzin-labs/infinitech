@@ -35,7 +35,7 @@ export default function TabNavigation() {
 
     // Count starting elements
     let count = 0;
-    if (categoryKey === 'basic') {
+    if (categoryKey === 'fundamentals') {
       count = 2; // 0 and 1
     }
 
