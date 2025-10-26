@@ -64,10 +64,29 @@ export const useGameStore = create<GameStore>()(
           showNewBadge: state.showNewBadge.filter((el) => el !== name),
         })),
 
-      setActiveTab: (tab) =>
+      setSearchQuery: (query) =>
         set(() => ({
-          activeTab: tab,
+          searchQuery: query,
         })),
+
+      setCategoryFilter: (category) =>
+        set(() => ({
+          categoryFilter: category,
+        })),
+
+      addRecentRecipe: (element1, element2, result) =>
+        set((state) => {
+          const newRecipe = { element1, element2, result };
+          // Check if recipe already exists in recent (by result)
+          const exists = state.recentRecipes.some(
+            (r) => r.result === result
+          );
+          if (exists) return state; // Don't add duplicates
+
+          // Add to front, keep max 5
+          const updated = [newRecipe, ...state.recentRecipes].slice(0, 5);
+          return { recentRecipes: updated };
+        }),
 
       clearCanvas: () =>
         set(() => ({
