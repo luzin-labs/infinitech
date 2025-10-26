@@ -9,7 +9,7 @@ interface ElementDimensions {
 
 /**
  * Check if two elements are colliding based on bounding box overlap
- * Returns true if overlap is >50% of smaller element
+ * Returns true if overlap is >10% of smaller element
  */
 export function checkCollision(
   el1: ElementDimensions,
@@ -40,10 +40,10 @@ export function checkCollision(
   // Get smaller element area
   const smallerArea = Math.min(el1Area, el2Area);
 
-  // Check if overlap is >50% of smaller element
+  // Check if overlap is >10% of smaller element
   const overlapPercentage = overlapArea / smallerArea;
 
-  return overlapPercentage > 0.5;
+  return overlapPercentage > 0.1;
 }
 
 /**

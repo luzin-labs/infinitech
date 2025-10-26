@@ -55,20 +55,36 @@ export default function ElementGrid() {
   }
 
   return (
-    <div className="flex gap-3 overflow-x-auto pb-4 px-4">
-      {filteredElements.map((elementName) => {
-        const category = getElementCategory(elementName);
-        const isNew = showNewBadge.includes(elementName);
+    <div
+      className="overflow-x-auto overflow-y-hidden px-4"
+      style={{
+        height: 'calc(30vh - 48px)'
+      }}
+    >
+      <div
+        className="h-full"
+        style={{
+          display: 'grid',
+          gridTemplateRows: 'repeat(4, 1fr)',
+          gridAutoFlow: 'column',
+          gap: '8px',
+          paddingBottom: '16px'
+        }}
+      >
+        {filteredElements.map((elementName) => {
+          const category = getElementCategory(elementName);
+          const isNew = showNewBadge.includes(elementName);
 
-        return (
-          <PaletteElement
-            key={elementName}
-            name={elementName}
-            category={category}
-            isNew={isNew}
-          />
-        );
-      })}
+          return (
+            <PaletteElement
+              key={elementName}
+              name={elementName}
+              category={category}
+              isNew={isNew}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }
