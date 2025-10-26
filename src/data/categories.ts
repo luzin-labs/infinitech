@@ -37,6 +37,13 @@ export const categoryTabs = [
   'Hardware',
   'Software',
   'Network',
+  'Web',
+  'Mobile',
+  'Database',
+  'Security',
+  'DevOps',
+  'Languages',
+  'Tools',
   'All',
 ] as const;
 
@@ -49,6 +56,13 @@ export const tabToCategoryMap: Record<string, Category | 'all'> = {
   'Hardware': 'hardware',
   'Software': 'software',
   'Network': 'network',
+  'Web': 'web',
+  'Mobile': 'mobile',
+  'Database': 'database',
+  'Security': 'security',
+  'DevOps': 'devops',
+  'Languages': 'language',
+  'Tools': 'tools',
   'All': 'all',
 };
 
