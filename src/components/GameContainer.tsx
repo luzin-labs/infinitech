@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useTheme } from 'next-themes';
 import Canvas from './Canvas';
 import Palette from './Palette';
 import ResetModal from './ResetModal';
@@ -9,11 +10,16 @@ import { getTotalDiscoverableCount } from '@/data/recipes';
 
 export default function GameContainer() {
   const [isResetModalOpen, setIsResetModalOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
   const discoveredElements = useGameStore((state) => state.discoveredElements);
   const clearCanvas = useGameStore((state) => state.clearCanvas);
 
   const totalDiscoverable = getTotalDiscoverableCount();
   const discoveredCount = discoveredElements.length;
+
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
 
   return (
     <div className="h-screen w-full flex flex-col overflow-hidden">
