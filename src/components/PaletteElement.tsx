@@ -2,6 +2,7 @@
 
 import { useState, useRef } from 'react';
 import { getCategoryColor } from '@/data/categories';
+import { getElementIcon } from '@/data/elementIcons';
 import { useGameStore } from '@/store/gameStore';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -77,7 +78,21 @@ export default function PaletteElement({ name, category, isNew }: PaletteElement
     createdElementId.current = null;
   };
 
-  const backgroundColor = getCategoryColor(category);
+  const categoryColor = getCategoryColor(category);
+  const icon = getElementIcon(name);
+
+  // Get lighter shade for dark mode text
+  const getLighterShade = (color: string) => {
+    // Simple color lightening for dark mode
+    const colorMap: Record<string, string> = {
+      '#3b82f6': '#60a5fa', // blue -> lighter blue
+      '#8b5cf6': '#a78bfa', // purple -> lighter purple
+      '#10b981': '#34d399', // green -> lighter green
+      '#f59e0b': '#fbbf24', // amber -> lighter amber
+      '#ef4444': '#f87171', // red -> lighter red
+    };
+    return colorMap[color] || color;
+  };
 
   return (
     <div
@@ -91,22 +106,21 @@ export default function PaletteElement({ name, category, isNew }: PaletteElement
       onPointerUp={handlePointerUp}
     >
       <div
-        className="px-4 py-2 font-medium text-sm text-white shadow-md hover:shadow-lg transition-shadow"
-        style={{ backgroundColor }}
+        className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-[20px] font-medium text-[13px] transition-all duration-200 select-none hover:-translate-y-0.5 hover:shadow-md ${
+          isDragging ? 'scale-95' : ''
+        }`}
+        style={{
+          backgroundColor: `${categoryColor}10`,
+          color: categoryColor,
+        }}
       >
-        {name}
+        {icon && <span className="text-[16px]">{icon}</span>}
+        <span>{name}</span>
       </div>
       {isNew && (
-        <span
-          className="absolute -top-1.5 -right-1.5 rounded-full"
-          style={{
-            width: '14px',
-            height: '14px',
-            backgroundColor: '#00ff00',
-            border: '2px solid #00cc00',
-            animation: 'pulse-green 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
-          }}
-        />
+        <span className="absolute -top-1 -right-1 bg-[#22c55e] text-white text-[10px] font-bold uppercase px-1.5 py-0.5 rounded-full">
+          NEW
+        </span>
       )}
     </div>
   );
