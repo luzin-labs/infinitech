@@ -5,22 +5,22 @@ import { Recipe, RecipeBook } from '@/types/game';
 export const recipes: RecipeBook = {
   // Tier 1 - Basic Concepts
   "0+1": { result: "Bit", category: "data" },
-  "1+1": { result: "Two", category: "basic" },
-  "0+0": { result: "Zero", category: "basic" },
+  "1+1": { result: "Two", category: "fundamentals" },
+  "0+0": { result: "Zero", category: "fundamentals" },
 
   // Tier 2 - Numbers & Data
   "Bit+Bit": { result: "Byte", category: "data" },
-  "0+Two": { result: "Binary", category: "basic" },
-  "1+Two": { result: "Three", category: "basic" },
+  "0+Two": { result: "Binary", category: "fundamentals" },
+  "1+Two": { result: "Three", category: "fundamentals" },
   "Byte+Byte": { result: "Word", category: "data" },
 
   // Logic Gates
-  "0+Binary": { result: "NOT", category: "logic" },
-  "1+Binary": { result: "AND", category: "logic" },
-  "0+Three": { result: "OR", category: "logic" },
-  "1+Three": { result: "XOR", category: "logic" },
-  "AND+NOT": { result: "NAND", category: "logic" },
-  "NOT+OR": { result: "NOR", category: "logic" },
+  "0+Binary": { result: "NOT", category: "fundamentals" },
+  "1+Binary": { result: "AND", category: "fundamentals" },
+  "0+Three": { result: "OR", category: "fundamentals" },
+  "1+Three": { result: "XOR", category: "fundamentals" },
+  "AND+NOT": { result: "NAND", category: "fundamentals" },
+  "NOT+OR": { result: "NOR", category: "fundamentals" },
 
   // Tier 3 - Data Structures
   "Word+Word": { result: "32-bit", category: "data" },
