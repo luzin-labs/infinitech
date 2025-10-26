@@ -21,7 +21,7 @@ export default function GameContainer() {
       <header className="bg-white dark:bg-neutral-800 border-b border-neutral-300 dark:border-neutral-700 px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <h1 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">
-            INFINITE CRAFT
+            INFINITECH
           </h1>
           <div className="text-sm text-neutral-600 dark:text-neutral-400">
             {discoveredCount}/{totalDiscoverable} discovered

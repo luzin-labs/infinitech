@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { useGameStore } from '@/store/gameStore';
 import CanvasElement from './CanvasElement';
+import NetworkBackground from './NetworkBackground';
 import { checkCollision, getMidpoint } from '@/utils/collision';
 import { getRecipe } from '@/data/recipes';
 import {
@@ -140,15 +141,14 @@ export default function Canvas() {
 
   return (
     <div
-      className="relative w-full bg-neutral-100 dark:bg-neutral-900"
+      className="relative w-full"
       style={{
         height: '70vh',
-        backgroundImage: `
-          radial-gradient(circle, rgba(0, 0, 0, 0.1) 1px, transparent 1px)
-        `,
-        backgroundSize: '20px 20px',
+        backgroundColor: '#0a0a14',
       }}
+      data-canvas
     >
+      <NetworkBackground />
       {canvasElements.map((element) => (
         <CanvasElement
           key={element.id}
