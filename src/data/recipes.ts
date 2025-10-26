@@ -70,7 +70,6 @@ export const recipes: RecipeBook = {
 
   // Tier 10 - Modern Computing
   "Computer+Network": { result: "Internet", category: "infrastructure" },
-  "Internet+Software": { result: "Cloud", category: "infrastructure" },
   "Algorithm+Algorithm": { result: "AI", category: "advanced" },
   "AI+Code": { result: "Machine-Learning", category: "advanced" },
   "Application+Cloud": { result: "SaaS", category: "advanced" },
