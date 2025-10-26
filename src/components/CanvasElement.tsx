@@ -3,6 +3,7 @@
 import { useState, useRef } from 'react';
 import { CanvasElement as CanvasElementType } from '@/types/game';
 import { getCategoryColor } from '@/data/categories';
+import { getElementIcon } from '@/data/elementIcons';
 import { useGameStore } from '@/store/gameStore';
 
 interface CanvasElementProps {
@@ -51,6 +52,7 @@ export default function CanvasElement({ element, onDragMove }: CanvasElementProp
   };
 
   const backgroundColor = getCategoryColor(element.category);
+  const icon = getElementIcon(element.name);
 
   return (
     <div
@@ -68,14 +70,14 @@ export default function CanvasElement({ element, onDragMove }: CanvasElementProp
       onPointerUp={handlePointerUp}
     >
       <div
-        className="px-4 py-2 rounded-none font-medium text-sm text-white shadow-lg"
+        className={`px-5 py-2.5 rounded-[20px] font-medium text-sm text-white ${
+          isDragging ? 'shadow-lg' : 'shadow-sm'
+        }`}
         style={{
           backgroundColor,
-          boxShadow: isDragging
-            ? '0 8px 16px rgba(0, 0, 0, 0.2)'
-            : '0 2px 8px rgba(0, 0, 0, 0.1)',
         }}
       >
+        {icon && <span>{icon} </span>}
         {element.name}
       </div>
     </div>

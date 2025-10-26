@@ -2,11 +2,11 @@
  * Animation utilities for element interactions
  */
 
-export const MERGE_ANIMATION_DURATION = 300; // ms
-export const SHAKE_ANIMATION_DURATION = 400; // ms
+export const MERGE_ANIMATION_DURATION = 400; // ms
+export const SHAKE_ANIMATION_DURATION = 300; // ms
 
 /**
- * Play merge animation - moves elements toward midpoint
+ * Play merge animation - simple fade out for both elements
  */
 export function playMergeAnimation(
   el1Id: string,
@@ -22,20 +22,20 @@ export function playMergeAnimation(
       return;
     }
 
-    // Add merge animation class
-    el1.style.transition = `all ${MERGE_ANIMATION_DURATION}ms ease-in-out`;
-    el2.style.transition = `all ${MERGE_ANIMATION_DURATION}ms ease-in-out`;
+    // Simple fade animation using Web Animations API
+    const fadeAnimation = [
+      { opacity: 1 },
+      { opacity: 0 }
+    ];
 
-    el1.style.transform = 'scale(1.1)';
-    el2.style.transform = 'scale(1.1)';
-    el1.style.opacity = '0.5';
-    el2.style.opacity = '0.5';
+    const animationOptions: KeyframeAnimationOptions = {
+      duration: MERGE_ANIMATION_DURATION,
+      easing: 'ease-in-out',
+      fill: 'forwards'
+    };
 
-    // Move to midpoint
-    el1.style.left = `${midpoint.x}px`;
-    el1.style.top = `${midpoint.y}px`;
-    el2.style.left = `${midpoint.x}px`;
-    el2.style.top = `${midpoint.y}px`;
+    el1.animate(fadeAnimation, animationOptions);
+    el2.animate(fadeAnimation, animationOptions);
 
     setTimeout(() => {
       resolve();
@@ -44,19 +44,23 @@ export function playMergeAnimation(
 }
 
 /**
- * Play shake animation - horizontal shake motion
+ * Play shake animation - subtle horizontal shake
  */
 export function playShakeAnimation(elId: string): void {
   const el = document.getElementById(elId);
   if (!el) return;
 
-  // Add shake class
-  el.classList.add('shake-animation');
-
-  // Remove after animation completes
-  setTimeout(() => {
-    el.classList.remove('shake-animation');
-  }, SHAKE_ANIMATION_DURATION);
+  // Subtle shake animation using Web Animations API
+  el.animate([
+    { transform: 'translateX(0)' },
+    { transform: 'translateX(-2px)' },
+    { transform: 'translateX(2px)' },
+    { transform: 'translateX(-2px)' },
+    { transform: 'translateX(0)' }
+  ], {
+    duration: SHAKE_ANIMATION_DURATION,
+    easing: 'ease-in-out'
+  });
 }
 
 /**
@@ -66,11 +70,15 @@ export function playAppearAnimation(elId: string): void {
   const el = document.getElementById(elId);
   if (!el) return;
 
-  el.classList.add('appear-animation');
-
-  setTimeout(() => {
-    el.classList.remove('appear-animation');
-  }, 300);
+  // Gentle appear animation using Web Animations API
+  el.animate([
+    { opacity: 0, transform: 'scale(0.8)' },
+    { opacity: 1, transform: 'scale(1)' }
+  ], {
+    duration: 300,
+    easing: 'ease-out',
+    fill: 'forwards'
+  });
 }
 
 /**

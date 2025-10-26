@@ -9,7 +9,9 @@ interface GameStore extends GameState {
   updateCanvasElementPosition: (id: string, x: number, y: number) => void;
   discoverElement: (name: string, category: string) => void;
   removeNewBadge: (name: string) => void;
-  setActiveTab: (tab: string) => void;
+  setSearchQuery: (query: string) => void;
+  setCategoryFilter: (category: string) => void;
+  addRecentRecipe: (element1: string, element2: string, result: string) => void;
   clearCanvas: () => void;
   resetProgress: () => void;
 }
@@ -17,8 +19,10 @@ interface GameStore extends GameState {
 const initialState: GameState = {
   discoveredElements: [],
   canvasElements: [],
-  activeTab: 'Fundamentals',
   showNewBadge: [],
+  searchQuery: '',
+  categoryFilter: 'All',
+  recentRecipes: [],
 };
 
 export const useGameStore = create<GameStore>()(
@@ -60,10 +64,29 @@ export const useGameStore = create<GameStore>()(
           showNewBadge: state.showNewBadge.filter((el) => el !== name),
         })),
 
-      setActiveTab: (tab) =>
+      setSearchQuery: (query) =>
         set(() => ({
-          activeTab: tab,
+          searchQuery: query,
         })),
+
+      setCategoryFilter: (category) =>
+        set(() => ({
+          categoryFilter: category,
+        })),
+
+      addRecentRecipe: (element1, element2, result) =>
+        set((state) => {
+          const newRecipe = { element1, element2, result };
+          // Check if recipe already exists in recent (by result)
+          const exists = state.recentRecipes.some(
+            (r) => r.result === result
+          );
+          if (exists) return state; // Don't add duplicates
+
+          // Add to front, keep max 5
+          const updated = [newRecipe, ...state.recentRecipes].slice(0, 5);
+          return { recentRecipes: updated };
+        }),
 
       clearCanvas: () =>
         set(() => ({

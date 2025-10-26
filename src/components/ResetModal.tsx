@@ -23,29 +23,29 @@ export default function ResetModal({ isOpen, onClose }: ResetModalProps) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
       onClick={handleCancel}
     >
       <div
-        className="bg-white dark:bg-neutral-800 rounded-lg shadow-xl p-6 max-w-md w-full mx-4"
+        className="bg-white dark:bg-[#1a1a1a] border border-[#e0e0e0] dark:border-[#3a3a3a] rounded-lg shadow-xl p-6 max-w-[400px] w-full mx-4"
         onClick={(e) => e.stopPropagation()}
       >
-        <h2 className="text-xl font-bold mb-4 text-neutral-900 dark:text-neutral-100">
-          Reset All Progress?
+        <h2 className="text-lg font-semibold mb-4 text-black dark:text-white">
+          Reset Progress
         </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 mb-6">
-          This will clear all discovered elements and canvas progress. This action cannot be undone.
+        <p className="text-[14px] text-[#666] dark:text-[#999] mb-6">
+          Are you sure? This will delete all discovered elements and progress.
         </p>
         <div className="flex gap-3 justify-end">
           <button
             onClick={handleCancel}
-            className="px-4 py-2 rounded-none bg-neutral-200 dark:bg-neutral-700 text-neutral-900 dark:text-neutral-100 font-medium hover:bg-neutral-300 dark:hover:bg-neutral-600 transition-colors"
+            className="px-4 py-2 rounded-md border border-[#e0e0e0] dark:border-[#3a3a3a] text-black dark:text-white hover:bg-[#f5f5f5] dark:hover:bg-[#252525] font-medium text-sm transition-all"
           >
             Cancel
           </button>
           <button
             onClick={handleReset}
-            className="px-4 py-2 rounded-none bg-red-600 text-white font-medium hover:bg-red-700 transition-colors"
+            className="px-4 py-2 rounded-md border border-[#d32f2f] dark:border-[#ff5252] text-[#d32f2f] dark:text-[#ff5252] hover:bg-[#fef2f2] dark:hover:bg-[#2a1a1a] font-medium text-sm transition-all"
           >
             Reset
           </button>
