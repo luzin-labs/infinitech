@@ -91,8 +91,8 @@ export default function PaletteElement({ name, category, isNew }: PaletteElement
       onPointerUp={handlePointerUp}
     >
       <div
-        className="px-4 py-2 rounded-2xl font-medium text-sm text-white shadow-md hover:shadow-lg transition-shadow"
-        style={{ backgroundColor }}
+        className="px-4 py-2 font-medium text-sm text-white shadow-md hover:shadow-lg transition-shadow"
+        style={{ backgroundColor, borderRadius: '3px' }}
       >
         {name}
       </div>
