@@ -21,20 +21,11 @@ export const categoryTabs = [
 
 // Map tab names to internal category names
 export const tabToCategoryMap: Record<string, Category | 'all'> = {
-  'Basics': 'basic',
-  'Logic': 'logic',
-  'Data': 'data',
-  'Operations': 'operations',
-  'Hardware': 'hardware',
+  'Fundamentals': 'fundamentals',
+  'Infrastructure': 'infrastructure',
   'Software': 'software',
-  'Network': 'network',
-  'Web': 'web',
-  'Mobile': 'mobile',
-  'Database': 'database',
-  'Security': 'security',
-  'DevOps': 'devops',
-  'Languages': 'language',
-  'Tools': 'tools',
+  'Applications': 'applications',
+  'Advanced': 'advanced',
   'All': 'all',
 };
 
