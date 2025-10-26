@@ -67,7 +67,6 @@ export const recipes: RecipeBook = {
   "Program+Program": { result: "Application", category: "software" },
   "Mainframe+Mainframe": { result: "Server", category: "infrastructure" },
   "Server+Server": { result: "Network", category: "infrastructure" },
-  "Network+Server": { result: "Cloud", category: "infrastructure" },
 
   // Tier 10 - Modern Computing
   "Computer+Network": { result: "Internet", category: "infrastructure" },
