@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useRef } from 'react';
 import { getCategoryColor } from '@/data/categories';
 import { useGameStore } from '@/store/gameStore';
 import { v4 as uuidv4 } from 'uuid';
@@ -11,10 +12,15 @@ interface PaletteElementProps {
 }
 
 export default function PaletteElement({ name, category, isNew }: PaletteElementProps) {
+  const [isDragging, setIsDragging] = useState(false);
+  const dragStartPos = useRef({ x: 0, y: 0 });
+  const createdElementId = useRef<string | null>(null);
+
   const addCanvasElement = useGameStore((state) => state.addCanvasElement);
+  const updatePosition = useGameStore((state) => state.updateCanvasElementPosition);
   const removeNewBadge = useGameStore((state) => state.removeNewBadge);
 
-  const handleDragStart = (e: React.DragEvent) => {
+  const handlePointerDown = (e: React.PointerEvent) => {
     // Get canvas position to place element at cursor
     const canvas = document.querySelector('[data-canvas]');
     if (!canvas) return;
@@ -34,23 +40,55 @@ export default function PaletteElement({ name, category, isNew }: PaletteElement
 
     addCanvasElement(newElement);
 
+    // Store the new element's ID and drag start position
+    createdElementId.current = newElement.id;
+    dragStartPos.current = { x: e.clientX, y: e.clientY };
+    setIsDragging(true);
+
+    // Capture pointer to track events even if it leaves element
+    e.currentTarget.setPointerCapture(e.pointerId);
+
     // Remove "New!" badge on first drag
     if (isNew) {
       removeNewBadge(name);
     }
 
-    // Store element ID for potential cleanup
-    e.dataTransfer.setData('elementId', newElement.id);
-    e.dataTransfer.effectAllowed = 'copy';
+    e.preventDefault();
+  };
+
+  const handlePointerMove = (e: React.PointerEvent) => {
+    if (!isDragging || !createdElementId.current) return;
+
+    // Get canvas position for new coordinates
+    const canvas = document.querySelector('[data-canvas]');
+    if (!canvas) return;
+
+    const rect = canvas.getBoundingClientRect();
+    const newX = e.clientX - rect.left;
+    const newY = e.clientY - rect.top;
+
+    // Update the created element's position
+    updatePosition(createdElementId.current, newX, newY);
+  };
+
+  const handlePointerUp = (e: React.PointerEvent) => {
+    setIsDragging(false);
+    e.currentTarget.releasePointerCapture(e.pointerId);
+    createdElementId.current = null;
   };
 
   const backgroundColor = getCategoryColor(category);
 
   return (
     <div
-      draggable
-      onDragStart={handleDragStart}
-      className="relative inline-flex cursor-grab active:cursor-grabbing"
+      className="relative inline-flex"
+      style={{
+        cursor: isDragging ? 'grabbing' : 'grab',
+        touchAction: 'none',
+      }}
+      onPointerDown={handlePointerDown}
+      onPointerMove={handlePointerMove}
+      onPointerUp={handlePointerUp}
     >
       <div
         className="px-4 py-2 rounded-2xl font-medium text-sm text-white shadow-md hover:shadow-lg transition-shadow"
