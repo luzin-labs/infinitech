@@ -1,6 +1,6 @@
 'use client';
 
-import TabNavigation from './TabNavigation';
+import SearchFilter from './SearchFilter';
 import ElementGrid from './ElementGrid';
 
 export default function Palette() {
@@ -10,7 +10,7 @@ export default function Palette() {
       style={{ height: '30vh', zIndex: 1001 }}
     >
       <div className="h-full flex flex-col">
-        <TabNavigation />
+        <SearchFilter />
         <div className="flex-1 overflow-hidden">
           <ElementGrid />
         </div>
