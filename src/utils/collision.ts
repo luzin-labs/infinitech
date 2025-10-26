@@ -9,7 +9,7 @@ interface ElementDimensions {
 
 /**
  * Check if two elements are colliding based on bounding box overlap
- * Returns true if overlap is >50% of smaller element
+ * Returns true if overlap is >10% of smaller element
  */
 export function checkCollision(
   el1: ElementDimensions,
