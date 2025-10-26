@@ -16,13 +16,10 @@ export interface GameState {
 }
 
 export type Category =
-  | 'basic'
-  | 'logic'
-  | 'data'
-  | 'operations'
-  | 'hardware'
+  | 'fundamentals'
+  | 'infrastructure'
   | 'software'
-  | 'network'
+  | 'applications'
   | 'advanced';
 
 export interface Recipe {
