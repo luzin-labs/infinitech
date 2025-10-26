@@ -8,11 +8,19 @@ export interface CanvasElement {
   category: string;                    // For color coding (basic/logic/data/etc)
 }
 
+export interface RecentRecipe {
+  element1: string;
+  element2: string;
+  result: string;
+}
+
 export interface GameState {
   discoveredElements: string[];        // Array of element names user has discovered
   canvasElements: CanvasElement[];     // Elements currently on canvas
-  activeTab: string;                   // Currently selected palette tab
   showNewBadge: string[];              // Elements with "New!" badge
+  searchQuery: string;                 // Search filter text
+  categoryFilter: string;              // Selected category filter ('All', 'Fundamentals', etc.)
+  recentRecipes: RecentRecipe[];       // Last 5 discovered recipes
 }
 
 export type Category =
