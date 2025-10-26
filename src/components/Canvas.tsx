@@ -143,7 +143,7 @@ export default function Canvas() {
     <div
       className="relative w-full"
       style={{
-        height: '70vh',
+        height: '100%',
         backgroundColor: '#0a0a14',
       }}
       data-canvas
