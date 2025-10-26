@@ -221,7 +221,7 @@ export const recipes: RecipeBook = {
   "HTML+JavaScript": { result: "DOM-Alt", category: "applications" },
   "DOM+Software": { result: "Browser", category: "applications" },
   "Browser+Internet": { result: "Chrome", category: "applications" },
-  "CSS+HTML": { result: "Webpage", category: "applications" },
+  "HTML+Style": { result: "Webpage", category: "applications" },
   "Function+Webpage": { result: "Interactive", category: "applications" },
   "Code+CSS": { result: "Sass", category: "applications" },
   "DOM+Function": { result: "Event", category: "applications" },
