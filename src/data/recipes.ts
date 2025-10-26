@@ -222,7 +222,7 @@ export const recipes: RecipeBook = {
   "DOM+Software": { result: "Browser", category: "frontend" },
   "Browser+Internet": { result: "Chrome", category: "frontend" },
   "CSS+HTML": { result: "Webpage", category: "frontend" },
-  "Interactive+JavaScript": { result: "Interactive", category: "frontend" },
+  "Function+Webpage": { result: "Interactive", category: "frontend" },
   "Code+CSS": { result: "Sass", category: "frontend" },
   "DOM+Function": { result: "Event", category: "frontend" },
   "Browser+Code": { result: "DevTools", category: "tools" },
@@ -303,20 +303,20 @@ export const recipes: RecipeBook = {
   "Software+Video": { result: "Premiere", category: "media" },
 
   // UI/UX Branch
-  "Design+Frontend": { result: "UI", category: "ui" },
+  "Frontend+Layout": { result: "UI", category: "ui" },
   "Code+UI": { result: "Button", category: "ui" },
   "Data+UI": { result: "Input", category: "ui" },
   "Button+Input": { result: "Form-Alt", category: "ui" },
   "Software+UI": { result: "Modal", category: "ui" },
   "Animation+UI": { result: "Transition-Alt", category: "ui" },
-  "Component+Frontend": { result: "Component", category: "ui" },
+  "Frontend+Function": { result: "Component", category: "ui" },
   "Component+Library": { result: "UI Kit", category: "ui" },
   "Design+UI": { result: "Interface", category: "ui" },
-  "Interface+Mobile": { result: "Touch", category: "ui" },
+  "Interface+Mobile App": { result: "Touch", category: "ui" },
   "Graphics+UI": { result: "Icon", category: "ui" },
   "Code+Design": { result: "Figma", category: "ui" },
   "Layout+UI": { result: "Dashboard", category: "ui" },
-  "Interface+UX": { result: "Responsive", category: "ui" },
+  "Interface+Website": { result: "Responsive", category: "ui" },
   "Component+State": { result: "Interactive-Alt", category: "ui" },
 
   // Tools Branch
