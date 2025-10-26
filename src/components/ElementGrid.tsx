@@ -19,7 +19,7 @@ function getElementCategory(elementName: string): string {
     }
   }
 
-  return 'basic'; // Fallback
+  return 'fundamentals'; // Fallback
 }
 
 export default function ElementGrid() {
