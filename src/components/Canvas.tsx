@@ -109,6 +109,9 @@ export default function Canvas() {
         // Discover new element
         discoverElement(recipe.result, recipe.category);
 
+        // Add to recent recipes
+        addRecentRecipe(name1, name2, recipe.result);
+
         // Play appear animation
         setTimeout(() => {
           playAppearAnimation(newElementId);
@@ -141,14 +144,17 @@ export default function Canvas() {
 
   return (
     <div
-      className="relative w-full"
-      style={{
-        height: '100%',
-        backgroundColor: '#0a0a14',
-      }}
+      className="relative w-full h-full bg-[#fafafa] dark:bg-[#2a2a2a]"
       data-canvas
     >
-      <NetworkBackground />
+      {canvasElements.length === 0 && (
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none select-none">
+          <div className="text-6xl mb-4 opacity-30">✨</div>
+          <div className="text-[14px] text-[#999] dark:text-[#666]">
+            Drag elements here to start combining
+          </div>
+        </div>
+      )}
       {canvasElements.map((element) => (
         <CanvasElement
           key={element.id}
