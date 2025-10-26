@@ -68,7 +68,7 @@ export default function CanvasElement({ element, onDragMove }: CanvasElementProp
       onPointerUp={handlePointerUp}
     >
       <div
-        className="px-4 py-2 rounded-2xl font-medium text-sm text-white shadow-lg"
+        className="px-4 py-2 rounded-none font-medium text-sm text-white shadow-lg"
         style={{
           backgroundColor,
           boxShadow: isDragging

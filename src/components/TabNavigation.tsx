@@ -49,7 +49,7 @@ export default function TabNavigation() {
   };
 
   return (
-    <div className="flex gap-2 border-b border-neutral-300 dark:border-neutral-700 px-4 overflow-x-auto">
+    <div className="flex gap-2 border-b border-neutral-300 dark:border-neutral-700 px-4 overflow-x-auto h-fit">
       {categoryTabs.map((tab) => {
         const isActive = activeTab === tab;
         const count = getCategoryCount(tab);

@@ -54,6 +54,31 @@ export default function ElementGrid() {
     );
   }
 
+  // Distribute items into balanced columns (max 4 rows per column)
+  const distributeItemsIntoColumns = (items: string[], maxRows = 4) => {
+    const totalItems = items.length;
+    const numColumns = Math.ceil(totalItems / maxRows);
+    const baseItemsPerColumn = Math.floor(totalItems / numColumns);
+    const extraItems = totalItems % numColumns;
+
+    const columns: string[][] = [];
+    let itemIndex = 0;
+
+    for (let col = 0; col < numColumns; col++) {
+      const itemsInThisColumn = (col < extraItems)
+        ? baseItemsPerColumn + 1
+        : baseItemsPerColumn;
+
+      const columnItems = items.slice(itemIndex, itemIndex + itemsInThisColumn);
+      columns.push(columnItems);
+      itemIndex += itemsInThisColumn;
+    }
+
+    return columns;
+  };
+
+  const columns = distributeItemsIntoColumns(filteredElements, 4);
+
   return (
     <div
       className="overflow-x-auto overflow-y-hidden px-4"
@@ -64,26 +89,36 @@ export default function ElementGrid() {
       <div
         className="h-full"
         style={{
-          display: 'grid',
-          gridTemplateRows: 'repeat(4, 1fr)',
-          gridAutoFlow: 'column',
+          display: 'flex',
+          flexDirection: 'row',
           gap: '8px',
           paddingBottom: '16px'
         }}
       >
-        {filteredElements.map((elementName) => {
-          const category = getElementCategory(elementName);
-          const isNew = showNewBadge.includes(elementName);
+        {columns.map((columnItems, colIndex) => (
+          <div
+            key={colIndex}
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '8px'
+            }}
+          >
+            {columnItems.map((elementName) => {
+              const category = getElementCategory(elementName);
+              const isNew = showNewBadge.includes(elementName);
 
-          return (
-            <PaletteElement
-              key={elementName}
-              name={elementName}
-              category={category}
-              isNew={isNew}
-            />
-          );
-        })}
+              return (
+                <PaletteElement
+                  key={elementName}
+                  name={elementName}
+                  category={category}
+                  isNew={isNew}
+                />
+              );
+            })}
+          </div>
+        ))}
       </div>
     </div>
   );
