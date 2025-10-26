@@ -5,6 +5,7 @@ import { useTheme } from 'next-themes';
 import Canvas from './Canvas';
 import Palette from './Palette';
 import ResetModal from './ResetModal';
+import RecipeHints from './RecipeHints';
 import { useGameStore } from '@/store/gameStore';
 import { getTotalDiscoverableCount } from '@/data/recipes';
 
@@ -64,6 +65,7 @@ export default function GameContainer() {
       {/* Canvas Area */}
       <div className="flex-1 relative" data-canvas>
         <Canvas />
+        <RecipeHints />
       </div>
 
       {/* Palette */}
