@@ -7,7 +7,7 @@ import { recipes } from '@/data/recipes';
 // Helper to get category for a discovered element
 function getElementCategory(elementName: string): string {
   if (elementName === '0' || elementName === '1') {
-    return 'basic';
+    return 'fundamentals';
   }
 
   for (const recipe of Object.values(recipes)) {
@@ -16,7 +16,7 @@ function getElementCategory(elementName: string): string {
     }
   }
 
-  return 'basic';
+  return 'fundamentals';
 }
 
 export default function TabNavigation() {
