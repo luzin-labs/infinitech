@@ -372,7 +372,7 @@ export const recipes: RecipeBook = {
   // Additional Cross-Connections
   "Algorithm+Python": { result: "Data Science", category: "advanced" },
   "AI+Data Science": { result: "ML Model", category: "advanced" },
-  "Cloud+Database": { result: "Cloud Storage", category: "advanced" },
+  "Cloud+Memory": { result: "Cloud Storage", category: "advanced" },
   "Internet+Security": { result: "Cybersecurity", category: "advanced" },
   "Game+Mobile App": { result: "Mobile Game", category: "applications" },
   "Database+Web App": { result: "CRUD App", category: "applications" },
