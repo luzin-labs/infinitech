@@ -3,7 +3,6 @@
 import { useEffect, useRef } from 'react';
 import { useGameStore } from '@/store/gameStore';
 import CanvasElement from './CanvasElement';
-import NetworkBackground from './NetworkBackground';
 import { checkCollision, getMidpoint } from '@/utils/collision';
 import { getRecipe } from '@/data/recipes';
 import {
@@ -19,6 +18,7 @@ export default function Canvas() {
   const removeCanvasElement = useGameStore((state) => state.removeCanvasElement);
   const addCanvasElement = useGameStore((state) => state.addCanvasElement);
   const discoverElement = useGameStore((state) => state.discoverElement);
+  const addRecentRecipe = useGameStore((state) => state.addRecentRecipe);
 
   // Track elements currently in merge animation to prevent double-merges
   const mergingElements = useRef<Set<string>>(new Set());
