@@ -208,7 +208,7 @@ export const recipes: RecipeBook = {
   "Internet+Language": { result: "PHP", category: "software" },
   "Language+Library": { result: "Ruby", category: "software" },
   "Library+Python": { result: "Django", category: "software" },
-  "JavaScript+Library": { result: "Node.js", category: "software" },
+  "JavaScript+Server": { result: "Node.js", category: "software" },
   "Java+Software": { result: "Spring", category: "software" },
   "Data+Python": { result: "Pandas", category: "software" },
   "Language+Speed": { result: "Go", category: "software" },
