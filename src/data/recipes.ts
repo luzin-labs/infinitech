@@ -260,7 +260,7 @@ export const recipes: RecipeBook = {
   "Algorithm+Blockchain": { result: "Mining", category: "advanced" },
   "Bitcoin+Network": { result: "Cryptocurrency", category: "advanced" },
   "Code+Smart Contract": { result: "Solidity", category: "advanced" },
-  "Blockchain+Data": { result: "Ledger", category: "advanced" },
+  "Blockchain+Database": { result: "Ledger", category: "advanced" },
   "Cryptocurrency+Internet": { result: "Wallet", category: "advanced" },
   "Ethereum+Smart Contract": { result: "DeFi", category: "advanced" },
   "Blockchain+Network": { result: "NFT", category: "advanced" },
