@@ -9,7 +9,9 @@ interface GameStore extends GameState {
   updateCanvasElementPosition: (id: string, x: number, y: number) => void;
   discoverElement: (name: string, category: string) => void;
   removeNewBadge: (name: string) => void;
-  setActiveTab: (tab: string) => void;
+  setSearchQuery: (query: string) => void;
+  setCategoryFilter: (category: string) => void;
+  addRecentRecipe: (element1: string, element2: string, result: string) => void;
   clearCanvas: () => void;
   resetProgress: () => void;
 }
@@ -17,8 +19,10 @@ interface GameStore extends GameState {
 const initialState: GameState = {
   discoveredElements: [],
   canvasElements: [],
-  activeTab: 'Fundamentals',
   showNewBadge: [],
+  searchQuery: '',
+  categoryFilter: 'All',
+  recentRecipes: [],
 };
 
 export const useGameStore = create<GameStore>()(
