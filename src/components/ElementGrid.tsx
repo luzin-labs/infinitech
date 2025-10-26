@@ -9,7 +9,7 @@ import { recipes } from '@/data/recipes';
 function getElementCategory(elementName: string): string {
   // Check if it's a starting element
   if (elementName === '0' || elementName === '1') {
-    return 'basic';
+    return 'fundamentals';
   }
 
   // Find the element in recipes
@@ -19,7 +19,7 @@ function getElementCategory(elementName: string): string {
     }
   }
 
-  return 'basic'; // Fallback
+  return 'fundamentals'; // Fallback
 }
 
 export default function ElementGrid() {
