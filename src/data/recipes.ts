@@ -273,7 +273,7 @@ export const recipes: RecipeBook = {
   "Code+Game Engine": { result: "Unity", category: "applications" },
   "Game Engine+Language": { result: "Unreal", category: "applications" },
   "Data+Game Engine": { result: "Godot", category: "applications" },
-  "Data+Graphics": { result: "Sprite", category: "applications" },
+  "Graphics+Image": { result: "Sprite", category: "applications" },
   "Code+Graphics": { result: "Texture", category: "applications" },
   "Algorithm+Game Engine": { result: "Physics Engine", category: "applications" },
   "Animation+Code": { result: "Animation-Alt", category: "applications" },
