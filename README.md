@@ -1,152 +1,84 @@
-# Next.js 15 Starter (tailwind) [[LIVE DEMO](https://nextjs-15-starter-tailwind.vercel.app/)]
+# InfiniTech
 
-> **⚠️ ARCHIVED**: This project has been archived. Please use the [Next.js 16 Starter (tailwind)](https://github.com/siddharthamaity/nextjs-16-starter-tailwind) instead.
+A creative tech element crafting game where you combine basic binary elements (0 and 1) to discover over 300+ technology concepts, from fundamental bits to advanced AI and quantum computing.
 
-![MIT License](https://img.shields.io/badge/license-MIT-blue) [![TypeScript](https://badgen.net/badge/icon/typescript?icon=typescript&label)](https://typescriptlang.org) ![ESLint](https://img.shields.io/badge/code%20style-eslint-brightgreen) ![GitHub stars](https://img.shields.io/github/stars/siddharthamaity/nextjs-15-starter-tailwind?style=social) ![GitHub forks](https://img.shields.io/github/forks/siddharthamaity/nextjs-15-starter-tailwind?style=social) [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/siddharthamaity)
+## About
 
-*This is the Tailwind version for Next.js 15 Starter, you may be interested in other templates too -*
-- [**Next.js 15 Starter Core**](https://github.com/SiddharthaMaity/nextjs-15-starter-core)
-- [**Next.js 15 Starter with Shadcn UI**](https://github.com/SiddharthaMaity/nextjs-15-starter-shadcn)
+InfiniTech is an interactive crafting experience built with modern web technologies. Drag and drop tech elements on the canvas to combine them and unlock new discoveries across the entire technology stack.
 
-Welcome to the **Next.js 15 Starter** repository! This starter template is built with Next.js 15, React 19, TypeScript 5, Tailwind CSS 4 and comes packed with several powerful tools and configurations to accelerate your project setup and streamline development workflows using VS Code.
+## Features
 
-![Next.js 15 Starter](public/images/screenshot.png)
+- **300+ Tech Elements**: Discover elements spanning web development, mobile, databases, security, DevOps, blockchain, gaming, IoT, and emerging technologies
+- **Intuitive Drag & Drop**: Smooth touch and mouse interactions on all devices using Pointer Events API
+- **Dynamic Discovery**: Multiple paths to discover elements create endless experimentation
+- **Organized Categories**: Browse elements by Basics, Logic, Data, Operations, Hardware, Software, Network, Web, Mobile, Database, Security, DevOps, Languages, and Tools
+- **Tech-Themed Canvas**: Animated network node background for an immersive tech aesthetic
+- **Progress Tracking**: Track your discoveries and see how many elements remain to be found
+- **Dark Mode**: Modern dark interface perfect for tech enthusiasts
 
-## 🚀 What's Included
+## Tech Stack
 
-- **Next.js 15**
-- **React 19**
-- **TypeScript 5**
-- **ESLint 9**
-- **Prettier 3**
-- **Tailwind CSS 4**
-- **App Directory**
-- **System, Light & Dark Mode**
-- **Next.js Bundle Analyzer**
-- **Dockerfile** with Node.js 22.19.0 (Alpine)
-- **Dockerfile.bun** with Bun 1.2.21 (Alpine)
+- **Next.js 15** - React framework with App Router
+- **React 19** - UI library with latest features
+- **TypeScript 5** - Type-safe development
+- **Tailwind CSS 4** - Utility-first styling
+- **Zustand** - Lightweight state management
+- **next-themes** - Theme switching support
 
-### 🛠️ ESLint Plugins
-
-- [**@eslint/js**](https://www.npmjs.com/package/@eslint/js)
-- [**typescript-eslint**](https://github.com/typescript-eslint/typescript-eslint)
-- [**eslint-plugin-react**](https://github.com/jsx-eslint/eslint-plugin-react)
-- [**@next/eslint-plugin-next**](https://github.com/vercel/next.js)
-- [**eslint-config-prettier**](eslint-config-prettier)
-- [**eslint-plugin-tailwindcss**](https://github.com/francoismassart/eslint-plugin-tailwindcss)
-- [**eslint-plugin-import**](https://github.com/import-js/eslint-plugin-import)
-- [**eslint-plugin-promise**](https://github.com/eslint-community/eslint-plugin-promise)
-
-### ✨ Prettier Plugins
-
-- [**@trivago/prettier-plugin-sort-imports**](https://github.com/trivago/prettier-plugin-sort-imports)
-- [**prettier-plugin-tailwindcss**](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
-
-### 💻 VS Code Extensions (Recommended)
-
-To enhance development experience, install the following VS Code extensions:
-
-- [**Auto Close Tag**](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
-- [**Better Comments**](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
-- [**DotENV**](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)
-- [**EditorConfig for VS Code**](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
-- [**ESLint**](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- [**formate: CSS/LESS/SCSS formatter**](https://marketplace.visualstudio.com/items?itemName=MikeBovenlander.formate)
-- [**Git History**](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
-- [**Import Cost**](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)
-- [**JavaScript Booster**](https://marketplace.visualstudio.com/items?itemName=sburg.vscode-javascript-booster)
-- [**npm Intellisense**](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
-- [**Prettier - Code formatter**](https://marketplace.visualstudio.com/items?itemName=esbenp)
-- [**Todo Tree**](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
-- [**Turbo Console Log**](https://marketplace.visualstudio.com/items?itemName=ChakrounAnas.turbo-console-log)
-- [**Package Json Upgrade**](https://marketplace.visualstudio.com/items?itemName=codeandstuff.package-json-upgrade)
-- [**Visual Studio Code Commitizen Support**](https://marketplace.visualstudio.com/items?itemName=KnisterPeter.vscode-commitizen)
-- [**Markdown All in One**](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
-
-
-## 🏁 Getting Started
+## Getting Started
 
 ### Prerequisites
 
-- **Bun**: Version 1.2.21 or higher OR
-- **Node.js**: Version 20.18.0 or higher
-- **Docker**: For containerized deployment (optional but recommended)
+- Node.js 20.18.0 or higher
+- npm, yarn, pnpm, or bun
 
 ### Installation
 
-1. **Clone the Repository**:
-    ```bash
-    git clone https://github.com/siddharthamaity/nextjs-15-starter-tailwind.git
-    cd nextjs-15-starter-tailwind
-    ```
+1. **Clone and navigate to the repository**:
+   ```bash
+   git clone <repository-url>
+   cd infinitech
+   ```
 
-2. **Install Dependencies**:
-    ```bash
-    npm install
-    # or with Yarn
-    yarn install
-    # or with pnpm
-    pnpm install
-    # or with Bun
-    bun install
-    ```
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-3. **Run Development Server**:
-    ```bash
-    npm run dev
-    # or with Yarn
-    yarn dev
-    # or with pnpm
-    pnpm dev
-    # or with Bun
-    bun dev
-    ```
+3. **Run development server**:
+   ```bash
+   npm run dev
+   ```
 
-4. **Build for Production**:
-    ```bash
-    npm run build
-    # or with Yarn
-    yarn build
-    # or with pnpm
-    pnpm build
-    # or with Bun
-    bun run build
-    ```
+4. **Open your browser**:
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-### 🐳 Docker Setup
-
-To use Docker, make sure Docker is installed on your machine. Then, build and run the Docker container:
+### Build for Production
 
 ```bash
-docker build . -t nextjs-starter-tailwind
-# or if using Bun
-docker build . -t nextjs-starter-tailwind -f Dockerfile.bun
-
-docker run -p 3000:3000 nextjs-starter-tailwind
+npm run build
+npm start
 ```
 
-### ☁ Try it in the Cloud
+## How to Play
 
-[![Open in VS Code](https://img.shields.io/badge/Open%20in-VS%20Code-blue?logo=visualstudiocode)](https://vscode.dev/github/SiddharthaMaity/nextjs-15-starter-tailwind)
+1. Start with the basic elements **0** and **1** in your palette
+2. Drag elements from the palette onto the canvas
+3. Drag one element onto another to combine them
+4. Discover new tech elements and expand your collection
+5. Experiment with different combinations to unlock the entire tech tree
 
-[![Open in GitHub Codespaces](https://img.shields.io/badge/Open%20in-GitHub%20Codespaces-blue?logo=github)](https://codespaces.new/SiddharthaMaity/nextjs-15-starter-tailwind)
+## Project Structure
 
-[![Open in CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/SiddharthaMaity/nextjs-15-starter-tailwind)
+```
+src/
+├── app/              # Next.js app router pages
+├── components/       # React components
+├── data/            # Game data (recipes, categories)
+├── store/           # Zustand state management
+└── types/           # TypeScript type definitions
+```
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/SiddharthaMaity/nextjs-15-starter-tailwind)
+## License
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz_small.svg)](https://stackblitz.com/github/SiddharthaMaity/nextjs-15-starter-tailwind)
-
-[![Open in Repl.it](https://replit.com/badge/github/SiddharthaMaity/nextjs-15-starter-tailwind)](https://replit.com/github/SiddharthaMaity/nextjs-15-starter-tailwind)
-
-[![Open in Glitch](https://img.shields.io/badge/Open%20in-Glitch-blue?logo=glitch)](https://glitch.com/edit/#!/import/github/SiddharthaMaity/nextjs-15-starter-tailwind)
-
-[![Open in Codeanywhere](https://codeanywhere.com/img/open-in-codeanywhere-btn.svg)](https://app.codeanywhere.com/#https://github.com/SiddharthaMaity/nextjs-15-starter-tailwind)
-
-### License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-<p style="text-align: center;"> With ❤️ from 🇮🇳 </p>
+MIT License
