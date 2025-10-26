@@ -17,7 +17,7 @@ interface GameStore extends GameState {
 const initialState: GameState = {
   discoveredElements: [],
   canvasElements: [],
-  activeTab: 'Basics',
+  activeTab: 'Fundamentals',
   showNewBadge: [],
 };
 
