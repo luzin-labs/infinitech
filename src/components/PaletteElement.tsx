@@ -92,7 +92,7 @@ export default function PaletteElement({ name, category, isNew }: PaletteElement
     >
       <div
         className="px-4 py-2 font-medium text-sm text-white shadow-md hover:shadow-lg transition-shadow"
-        style={{ backgroundColor, borderRadius: '3px' }}
+        style={{ backgroundColor }}
       >
         {name}
       </div>
