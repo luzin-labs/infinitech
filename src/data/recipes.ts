@@ -119,7 +119,7 @@ export const recipes: RecipeBook = {
   "Backend+Frontend": { result: "Full-Stack", category: "web" },
 
   // Mobile Development Branch
-  "Internet+Software": { result: "Mobile App", category: "mobile" },
+  "Application+Internet": { result: "Mobile App", category: "mobile" },
   "Code+Mobile App": { result: "iOS", category: "mobile" },
   "Data+Mobile App": { result: "Android", category: "mobile" },
   "Code+iOS": { result: "Swift", category: "language" },
@@ -219,7 +219,7 @@ export const recipes: RecipeBook = {
 
   // Frontend Branch
   "HTML+JavaScript": { result: "DOM-Alt", category: "frontend" },
-  "Browser+Software": { result: "Browser", category: "frontend" },
+  "DOM+Software": { result: "Browser", category: "frontend" },
   "Browser+Internet": { result: "Chrome", category: "frontend" },
   "CSS+HTML": { result: "Webpage", category: "frontend" },
   "Interactive+JavaScript": { result: "Interactive", category: "frontend" },
