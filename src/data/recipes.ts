@@ -20,12 +20,12 @@ export const recipes: RecipeBook = {
   "0+Three": { result: "OR", category: "logic" },
   "1+Three": { result: "XOR", category: "logic" },
   "AND+NOT": { result: "NAND", category: "logic" },
-  "NOR+NOT": { result: "NOR", category: "logic" },
+  "NOT+OR": { result: "NOR", category: "logic" },
 
   // Tier 3 - Data Structures
   "Word+Word": { result: "32-bit", category: "data" },
   "32-bit+32-bit": { result: "64-bit", category: "data" },
-  "Array+Byte": { result: "Array", category: "data" },
+  "Byte+Word": { result: "Array", category: "data" },
   "Array+Bit": { result: "Memory", category: "hardware" },
   "32-bit+Word": { result: "Register", category: "hardware" },
 
@@ -42,7 +42,7 @@ export const recipes: RecipeBook = {
   "ALU+XOR": { result: "Processor-Core", category: "hardware" },
 
   // Tier 6 - Memory & Hardware
-  "AND+NOT": { result: "Latch", category: "hardware" },
+  "NAND+NOR": { result: "Latch", category: "hardware" },
   "Latch+OR": { result: "Flip-Flop", category: "hardware" },
   "Flip-Flop+Word": { result: "Register-Alt", category: "hardware" },
   "Array+Register": { result: "RAM", category: "hardware" },
@@ -64,7 +64,7 @@ export const recipes: RecipeBook = {
   // Tier 9 - Advanced Software
   "Algorithm+Data": { result: "Function", category: "software" },
   "Function+Function": { result: "Library", category: "software" },
-  "Application+Program": { result: "Application", category: "software" },
+  "Program+Program": { result: "Application", category: "software" },
   "Mainframe+Mainframe": { result: "Server", category: "network" },
   "Server+Server": { result: "Network", category: "network" },
 
