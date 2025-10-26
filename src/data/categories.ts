@@ -31,7 +31,7 @@ export const tabToCategoryMap: Record<string, Category | 'all'> = {
 
 // Get color for a category
 export function getCategoryColor(category: string): string {
-  return categoryColors[category] || categoryColors.basic;
+  return categoryColors[category] || categoryColors.fundamentals;
 }
 
 // Get category from element name (for starting elements)
