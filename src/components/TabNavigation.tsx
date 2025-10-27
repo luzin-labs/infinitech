@@ -20,8 +20,8 @@ function getElementCategory(elementName: string): string {
 }
 
 export default function TabNavigation() {
-  const activeTab = useGameStore((state) => state.activeTab);
-  const setActiveTab = useGameStore((state) => state.setActiveTab);
+  const categoryFilter = useGameStore((state) => state.categoryFilter);
+  const setCategoryFilter = useGameStore((state) => state.setCategoryFilter);
   const discoveredElements = useGameStore((state) => state.discoveredElements);
 
   // Count elements in each category
@@ -51,13 +51,13 @@ export default function TabNavigation() {
   return (
     <div className="flex gap-2 border-b border-neutral-300 dark:border-neutral-700 px-4 overflow-x-auto h-fit">
       {categoryTabs.map((tab) => {
-        const isActive = activeTab === tab;
+        const isActive = categoryFilter === tab;
         const count = getCategoryCount(tab);
 
         return (
           <button
             key={tab}
-            onClick={() => setActiveTab(tab)}
+            onClick={() => setCategoryFilter(tab)}
             className={`
               px-4 py-2 font-medium text-sm whitespace-nowrap transition-colors
               ${
