@@ -20,8 +20,8 @@ function getElementCategory(elementName: string): string {
 }
 
 export default function TabNavigation() {
-  const activeTab = useGameStore((state) => state.activeTab);
-  const setActiveTab = useGameStore((state) => state.setActiveTab);
+  const categoryFilter = useGameStore((state) => state.categoryFilter);
+  const setCategoryFilter = useGameStore((state) => state.setCategoryFilter);
   const discoveredElements = useGameStore((state) => state.discoveredElements);
 
   // Count elements in each category
